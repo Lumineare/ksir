@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Kasir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulasi Kasir</h1>
+        <p>Latih kemampuan Anda sebagai kasir dengan menghitung transaksi dalam Rupiah!</p>
+        
+        <div id="transaction">
+            <h2>Daftar Belanjaan</h2>
+            <ul id="item-list"></ul>
+            <h3>Total Belanja: <span id="total">Rp 0</span></h3>
+            
+            <div class="input-group">
+                <label for="payment">Masukkan jumlah uang pelanggan (Rp):</label>
+                <input type="number" id="payment" placeholder="Contoh: 100000">
+                <button onclick="processPayment()">Proses Pembayaran</button>
+            </div>
+            
+            <div id="result" class="hidden">
+                <p>Uang yang diberikan: <span id="paid-amount">Rp 0</span></p>
+                <p>Kembalian: <span id="change">Rp 0</span></p>
+                
+                <h3>Latihan: Hitung Kembalian</h3>
+                <p>Berapa kembalian untuk <span id="paid-display">Rp 0</span> - <span id="total-display">Rp 0</span>?</p>
+                <input type="number" id="manual-change" placeholder="Masukkan kembalian (Rp)">
+                <button onclick="checkManualChange()">Cek Jawaban</button>
+                <p id="feedback"></p>
+            </div>
+        </div>
+        
+        <button onclick="newTransaction()" id="new-transaction" class="hidden">Transaksi Baru</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
